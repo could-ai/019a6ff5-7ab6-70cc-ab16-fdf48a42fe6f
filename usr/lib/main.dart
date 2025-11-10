@@ -30,9 +30,11 @@ class FitProApp extends StatelessWidget {
           ),
         ),
       ),
+      // Remove initialRoute and use home directly
       home: const HomeScreen(),
+      // Keep routes for navigation
       routes: {
-        '/': (context) => const HomeScreen(),
+        '/home': (context) => const HomeScreen(),
       },
     );
   }
