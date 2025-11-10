@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="FitPro - Seu aplicativo completo de calistenia com mais de 40 exercícios organizados por grupo muscular">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="couldai_user_app">
+  <meta name="apple-mobile-web-app-title" content="FitPro">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>couldai_user_app</title>
+  <title>FitPro - Calistenia Premium</title>
   <link rel="manifest" href="manifest.json">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    
+    .loading-container {
+      text-align: center;
+      color: white;
+    }
+    
+    .loading-logo {
+      font-size: 80px;
+      margin-bottom: 20px;
+      animation: bounce 1s infinite;
+    }
+    
+    .loading-text {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .loading-subtext {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    
+    .loading-spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
 </head>
 <body>
+  <div class="loading-container">
+    <div class="loading-logo">💪</div>
+    <div class="loading-text">FitPro</div>
+    <div class="loading-subtext">Calistenia Premium</div>
+    <div class="loading-spinner"></div>
+  </div>
+  
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
